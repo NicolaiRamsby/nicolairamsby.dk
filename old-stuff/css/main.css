@@ -1,0 +1,670 @@
+/*
+ *
+ * Template Name: Sven
+ * Description: Creative and Minimal Teaser Template
+ * Authors: Livin Senan, Manoj Raj
+ *
+ */
+ 
+ /* ==================================================================
+ * Table of Contents:
+ *
+ * 1.0 - Custom Font Declarations(if any)
+ * 2.0 - Simple Fixes
+ * 3.0 - Basic Styles
+ * 4.0 - Template Specific Styles (Custom CSS here)
+ *			4.1 - Charity(Single Image)
+ *			4.2 - Travel(HTML5 Video)
+ *			4.3 - App Company(Youtube Video)
+ *			4.4 - Corporate(Slide Show)
+ *			4.5 - Year In Review(Assorted)
+ *			4.6 - Mobile App Promo(Animating Colors)
+ *			4.7 - Template Promo(Gradient)
+ * 5.0 - Coming Soon Scene Styles (.coming-soon class)
+ * 6.0 - Subscribe Popup
+ * 7.0 - Responsive Styles
+ * 		7.1 - Small Devices, Tablets
+ * 		7.2 - Medium Devices, Desktops
+ * 		7.3 - Large Devices, Wide Screen
+ 
+================================================================== */
+
+/* ==================================================================
+	1.0 Custom Font Declarations(if any)
+================================================================== */
+
+/* ==================================================================
+	2.0 Simple Fixes
+================================================================== */
+
+/* Remove dotted borders around the links when clicked */
+a, a:active, a:focus, input:focus {
+	outline: none; 
+	text-decoration: none !important;
+}
+
+/* Tell the browser to use Hardware Acceleration for smoother animation */
+.force3D {
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+   
+   -webkit-backface-visibility: hidden;
+   -moz-backface-visibility: hidden;
+   -ms-backface-visibility: hidden;
+   backface-visibility: hidden;
+
+   -webkit-perspective: 1000;
+   -moz-perspective: 1000;
+   -ms-perspective: 1000;
+   perspective: 1000;
+}
+
+/* clearfix */
+.clear {
+	clear: both;
+}
+
+button:focus {outline:0;}
+
+::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, 0.1);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255, 255, 255, 0.1); 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.1);
+}
+
+:-ms-input-placeholder {  
+  color: rgba(255, 255, 255, 0.1); 
+}
+
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0 !important; 
+}
+
+/* ==================================================================
+	3.0 Basic Styles
+================================================================== */
+body {
+	background: none #000;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px; /* Base Font size */
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body.set-overflow {
+	overflow: visible;
+}
+
+.italic {
+	font-style: italic;
+}
+
+/****** H1(base element in our animations) *********/
+h1 {
+	font-size: 1.5em;
+	font-weight: normal;
+	text-decoration: none;
+	line-height: 1.1;
+	margin: 0;
+	padding: 0;
+	-webkit-text-stroke: 0.2px; /* to fix thin fonts rendering problems in iOS safari and android browsers. You can remove it or change the values */
+}
+
+.thin {
+	font-weight: 100;
+}
+
+/* ==================================================================
+	4.0 Template Specific Styles (Custom CSS here)
+================================================================== */
+
+/*	4.1 Charity(Single Image)
+	-------------------------------------------------------------- */
+#charity .lt-boxed {
+	background: none #ffba00;
+}
+
+/*	4.2 Travel(HTML5 Video)
+	-------------------------------------------------------------- */
+#travel	.lt-boxed {
+	background: none #60d8ff;
+}	
+
+/*	4.3 App Company(Youtube Video)
+	-------------------------------------------------------------- */
+#apps .lt-boxed {
+	background: none #fac012;
+}
+
+#apps ~ * .video-overlay {
+	background: none #0c182c;
+	opacity: 0.6;
+}
+
+/*	4.4 Corporate(Slide Show)
+	-------------------------------------------------------------- */
+#corporate .lt-boxed {
+	background: none #3498db;
+}
+
+#corporate h1 {
+	-webkit-text-stroke: 0px;
+}
+
+#corporate .lt-main {
+	font-weight: 300;
+}
+
+#corporate .lt-sub {
+	color: #fff;
+}
+
+/*	4.5 Year In Review(Mixed)
+	-------------------------------------------------------------- */
+#yearinreview {
+	text-transform: uppercase;
+}
+
+#yearinreview h1 {
+	-webkit-text-stroke: 0px;
+}
+
+#yearinreview .lt-main {
+	font-weight: 300;
+}
+
+#yearinreview .lt-boxed {
+	background: none #ff1f34;
+}
+
+#yearinreview .lt-sub {
+	color: #fff;
+}
+
+#yearinreview .coming-soon .lt-main {
+	font-size: 2.875em;
+	font-weight: 700;
+}
+
+#yearinreview .coming-soon .lt-sub {
+	font-size: 1.125em;
+}
+
+#yearinreview .coming-soon h1 {
+	line-height: 1.2;
+}
+
+/* align text to baseline */
+#yearinreview .coming-soon div[class^="sven-char-"]::after {
+	content: "";
+	height: 100%;
+	display: inline-block;
+}
+
+/*	4.6 Mobile App Promo(Animating Colors)
+	-------------------------------------------------------------- */
+#mobileapp {
+	background: none transparent;
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+}
+
+#mobileapp .lt-main {
+	font-weight: 700;
+	font-size: 1.75em;
+}
+
+#mobileapp .lt-sub {
+	color: #fff;
+}
+
+#mobileapp .lt-boxed {
+	background: none transparent;
+}
+
+#mobileapp h1 {
+	-webkit-text-stroke: 0px;
+}
+
+#mobileapp ~ .controls-nav {
+	font-family: 'Dosis', sans-serif;
+}
+
+/*	4.7 Template Promo(Gradient Mixed)
+	-------------------------------------------------------------- */
+#templatepromo {
+	background: none transparent;
+	font-family: 'Dosis', sans-serif;
+	text-transform: uppercase;
+}
+
+#templatepromo .lt-main {
+	font-weight: 700;
+	font-size: 1.75em;
+}
+
+#templatepromo .lt-sub {
+	color: #fff;
+}
+
+#templatepromo .lt-boxed {
+	background: none transparent;
+}
+
+#templatepromo h1 {
+	-webkit-text-stroke: 0px;
+}
+
+#templatepromo #scene-1 {
+	background: rgba(72,85,99,1);
+	background: -moz-linear-gradient(left, rgba(72,85,99,1) 0%, rgba(41,50,60,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(72,85,99,1)), color-stop(100%, rgba(41,50,60,1)));
+	background: -webkit-linear-gradient(left, rgba(72,85,99,1) 0%, rgba(41,50,60,1) 100%);
+	background: -o-linear-gradient(left, rgba(72,85,99,1) 0%, rgba(41,50,60,1) 100%);
+	background: -ms-linear-gradient(left, rgba(72,85,99,1) 0%, rgba(41,50,60,1) 100%);
+	background: linear-gradient(to right, rgba(72,85,99,1) 0%, rgba(41,50,60,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#485563', endColorstr='#29323c', GradientType=1 );
+}
+
+#templatepromo #scene-2 {
+	background: rgba(19,106,138,1);
+	background: -moz-linear-gradient(left, rgba(19,106,138,1) 0%, rgba(38,120,113,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(19,106,138,1)), color-stop(100%, rgba(38,120,113,1)));
+	background: -webkit-linear-gradient(left, rgba(19,106,138,1) 0%, rgba(38,120,113,1) 100%);
+	background: -o-linear-gradient(left, rgba(19,106,138,1) 0%, rgba(38,120,113,1) 100%);
+	background: -ms-linear-gradient(left, rgba(19,106,138,1) 0%, rgba(38,120,113,1) 100%);
+	background: linear-gradient(to right, rgba(19,106,138,1) 0%, rgba(38,120,113,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#136a8a', endColorstr='#267871', GradientType=1 );
+}
+
+#templatepromo #scene-3 {
+	background: rgba(19,78,94,1);
+	background: -moz-linear-gradient(left, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(19,78,94,1)), color-stop(100%, rgba(113,178,128,1)));
+	background: -webkit-linear-gradient(left, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%);
+	background: -o-linear-gradient(left, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%);
+	background: -ms-linear-gradient(left, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%);
+	background: linear-gradient(to right, rgba(19,78,94,1) 0%, rgba(113,178,128,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#134e5e', endColorstr='#71b280', GradientType=1 );
+}
+
+#templatepromo #scene-4 {
+	background: rgba(92,37,141,1);
+	background: -moz-linear-gradient(left, rgba(92,37,141,1) 0%, rgba(67,137,162,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(92,37,141,1)), color-stop(100%, rgba(67,137,162,1)));
+	background: -webkit-linear-gradient(left, rgba(92,37,141,1) 0%, rgba(67,137,162,1) 100%);
+	background: -o-linear-gradient(left, rgba(92,37,141,1) 0%, rgba(67,137,162,1) 100%);
+	background: -ms-linear-gradient(left, rgba(92,37,141,1) 0%, rgba(67,137,162,1) 100%);
+	background: linear-gradient(to right, rgba(92,37,141,1) 0%, rgba(67,137,162,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c258d', endColorstr='#4389a2', GradientType=1 );
+}
+
+#templatepromo #scene-5 {
+	background: rgba(52,143,79,1);
+	background: -moz-linear-gradient(left, rgba(52,143,79,1) 0%, rgba(86,180,211,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52,143,79,1)), color-stop(100%, rgba(86,180,211,1)));
+	background: -webkit-linear-gradient(left, rgba(52,143,79,1) 0%, rgba(86,180,211,1) 100%);
+	background: -o-linear-gradient(left, rgba(52,143,79,1) 0%, rgba(86,180,211,1) 100%);
+	background: -ms-linear-gradient(left, rgba(52,143,79,1) 0%, rgba(86,180,211,1) 100%);
+	background: linear-gradient(to right, rgba(52,143,79,1) 0%, rgba(86,180,211,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348f4f', endColorstr='#56b4d3', GradientType=1 );
+} 
+
+#templatepromo #scene-6, #templatepromo #scene-7 {
+	background: rgba(67,137,162,1);
+	background: -moz-linear-gradient(left, rgba(67,137,162,1) 0%, rgba(28,216,210,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(67,137,162,1)), color-stop(100%, rgba(28,216,210,1)));
+	background: -webkit-linear-gradient(left, rgba(67,137,162,1) 0%, rgba(28,216,210,1) 100%);
+	background: -o-linear-gradient(left, rgba(67,137,162,1) 0%, rgba(28,216,210,1) 100%);
+	background: -ms-linear-gradient(left, rgba(67,137,162,1) 0%, rgba(28,216,210,1) 100%);
+	background: linear-gradient(to right, rgba(67,137,162,1) 0%, rgba(28,216,210,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4389a2', endColorstr='#1cd8d2', GradientType=1 );
+}
+
+#buy-button {
+	letter-spacing: 2px;
+	background: none rgba(246, 227, 190, 0.3);
+	border: 1px solid #c4b391;
+	font-weight: 400;
+	color: #fff3db;
+}
+
+#buy-button:hover {
+	background: none transparent;
+	border: 1px solid #fff;
+	opacity: 1;
+}
+
+#buy-button i {
+	padding-right: 10px;
+}
+
+#templatepromo ~ .controls-nav {
+	font-family: 'Dosis', sans-serif;
+}
+
+/* ==================================================================
+	5.0 Coming Soon Scene (.coming-soon class)
+================================================================== */
+
+.coming-soon .lt-main {
+	font-size: 1.75em;
+	font-weight: normal;
+}
+
+.coming-soon .lt-sub {
+	font-size: 1em; /* reset relative font size here */
+	font-weight: normal;
+}
+
+.coming-soon .lt-boxed {
+	background: none transparent !important;
+}
+
+.coming-soon .btn {
+	border-radius: 0px;
+	margin-top: 10px;
+	font-size: 0.75em;
+	font-weight: 400;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.btn.btn-ghost {
+	color: #fff;
+	background: none transparent;
+	border: 1px solid #fff;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+/* hashtag */
+.hashtag {
+	position: absolute;
+	bottom: 18px;
+	right: 2%;
+	z-index: 5;
+	font-size: 0.75em; /* reset relative font size here */
+}
+
+.hashtag a {
+	display: inline-block;
+	font-size: 1em;
+	font-weight: normal;
+	color: #fff;
+	opacity: 0.6;
+	padding: 10px 0px;
+}
+
+.hashtag a:hover {
+	opacity: 0.8;
+}
+
+#mobileapp .img-responsive {
+	max-width: 50%;
+}
+
+.social-wrapper {
+	position: absolute;
+	bottom: 18px;
+	left: 2%;
+	z-index: 5;
+}
+
+.social-wrapper ul { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+}
+.social-wrapper li { 
+	display: inline-block; 
+	text-align: center; 
+}
+.social-wrapper li a { 
+	display: block; 
+	background: none transparent; 
+	width: 28px; 
+	height: 28px; 
+	text-align: center; 
+	line-height: 1.9em; 
+	font-size: 14px; 
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.6);
+	-webkit-transition: all .3s ease; 
+	-moz-transition: all .3s ease; 
+	-o-transition: all .3s ease; 
+	transition: all .3s ease; 
+}
+.social-wrapper li a.fb:hover { background: #3b5998; color: #fff; }
+.social-wrapper li a.tw:hover { background: #00aced; color: #fff; }
+.social-wrapper li a.gp:hover { background: #dd4b39; color: #fff; }
+.social-wrapper li a.pin:hover { background: #cb2027; color: #fff; }
+.social-wrapper li a.mail:hover { background: #32506d; color: #fff; }
+/* ==================================================================
+	6.0 Subscribe Popup
+================================================================== */
+
+.modal-content {
+	border-radius: 0px;
+	color: #000;
+}
+
+.modal-body {
+	padding: 25px;
+}
+
+.modal-body h3 {
+	text-decoration: underline;
+	margin-bottom: 15px;
+}
+
+.modal-header, .modal-footer {
+	border: 0px;
+}
+
+.subscribe-label i {
+	margin-right: 10px;
+}
+
+.subscribe-label .fa-check {
+	color: #229C85;
+}
+
+.subscribe-label .fa-times {
+	color: #EF2E30;
+}
+
+/* Social Icons */
+.social-icons {
+	margin: 36px 0px 0px;
+	padding-left: 0;
+	list-style: none;
+}
+
+.social-icons li {
+	display: inline-block;
+	padding: 0px 8px;
+}
+
+/* Change icons size here */
+.social-icons .fa {
+	font-size: 1.125em;
+}
+
+.social-icons .fa {
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	text-align: center;
+	color: #000;
+	color: rgba(0, 0, 0, 0.8);
+	background: none transparent;
+}
+
+.social-icons .fa:hover, .social-icons .fa:active {
+	opacity: 0.7;
+}
+
+.popover-content {
+	color: #000;
+}
+
+.logo-holder {
+	display: inline-block;
+	margin-bottom: 36px;
+}
+
+.logo-holder img {
+	width: 40%;
+}
+
+/* ==================================================================
+	7.0 Responsive
+================================================================== */
+
+/*	7.1 Small Devices, Tablets
+	-------------------------------------------------------------- */
+ @media only screen and (min-width : 768px) {
+ 	h1 {
+		-webkit-text-stroke: 0px;
+	}
+	
+	.coming-soon .lt-main, #mobileapp .lt-main, #templatepromo .lt-main  {
+		font-size: 2.75em;
+	}
+	
+	#yearinreview .coming-soon .lt-main {
+		font-size: 6.875em;
+	}
+	
+	#yearinreview .coming-soon .lt-sub {
+		font-size: 2.625em;
+	}
+	
+	.coming-soon .btn {
+		font-size: 0.875em;
+		margin-top: 10px;
+	}
+	
+	.hashtag {
+		font-size: 1em;
+	}
+	
+	#mobileapp .img-responsive {
+		max-width: 80%;
+	}
+	
+	.social-wrapper .social-icons li {
+		padding: 0px 6px 0px 0px;
+	}
+	
+	.social-wrapper {
+		font-size: 0.75em;
+	}
+ }
+
+/*	7.2 Medium Devices, Desktops, Laptops
+	-------------------------------------------------------------- */
+@media only screen and (min-width : 1224px) {
+	h1 {
+		-webkit-text-stroke: 0px;
+	}
+	
+	.coming-soon .lt-main, #mobileapp .lt-main, #templatepromo .lt-main {
+		font-size: 3.75em;
+	}
+	
+	#yearinreview .coming-soon .lt-main {
+		font-size: 9em;
+	}
+	
+	#yearinreview .coming-soon .lt-sub {
+		font-size: 3.125em;
+	}
+	
+	.coming-soon .btn {
+		font-size: 1.125em;
+		margin-top: 15px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	
+	.hashtag {
+		font-size: 1em;
+	}
+	
+	#mobileapp .img-responsive {
+		max-width: 100%;
+	}
+	
+	.social-wrapper .social-icons li {
+		padding: 0px 8px 0px 0px;
+	}
+	
+	.social-wrapper {
+		font-size: 1em;
+	}
+}
+
+
+/*	7.3 Large Devices, Wide Screens
+	-------------------------------------------------------------- */
+@media only screen and (min-width : 1824px) {
+	h1 {
+		-webkit-text-stroke: 0px;
+	}
+	
+	.coming-soon .lt-main, #mobileapp .lt-main, #templatepromo .lt-main {
+		font-size: 5em;
+	}
+	
+	#yearinreview .coming-soon .lt-main {
+		font-size: 11.625em;
+	}
+	
+	#yearinreview .coming-soon .lt-sub {
+		font-size: 3.875em;
+	}
+	
+	.coming-soon .btn {
+		font-size: 1.5em;
+		margin-top: 20px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	
+	.hashtag {
+		font-size: 1em;
+	}
+	
+	#mobileapp .img-responsive {
+		max-width: 100%;
+	}
+	
+	.social-wrapper .social-icons li {
+		padding: 0px 8px 0px 0px;
+	}
+	
+	.social-wrapper {
+		font-size: 1em;
+	}
+}
+
+
+
