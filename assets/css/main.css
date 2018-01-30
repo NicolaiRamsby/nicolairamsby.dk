@@ -1033,6 +1033,8 @@
 @media screen and (max-width:768px){
 	#wrapper, body{
 		overflow-x: hidden !important;
+	}
+	#wrapper{
 		-webkit-overflow-scrolling: touch;
 	}
 }
