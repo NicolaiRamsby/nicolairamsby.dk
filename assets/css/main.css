@@ -1031,11 +1031,8 @@
 }
 
 @media screen and (max-width:768px){
-	body{
-		overflow-x: hidden;
+	#wrapper, body{
+		overflow-x: hidden !important;
+		-webkit-overflow-scrolling: touch;
 	}
-}
-
-#wrapper, body, html{
-	overflow-x: hidden !important;
 }
