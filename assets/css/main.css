@@ -1029,3 +1029,7 @@
 .caseimage.last{
 	margin-bottom: 0px;
 }
+
+*{
+	overflow-x: hidden;
+}
