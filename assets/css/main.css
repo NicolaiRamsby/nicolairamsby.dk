@@ -1021,7 +1021,11 @@
 	}
 }
 
-.caseimage:not(.last){
+.caseimage{
 	width: 100%;
 	margin-bottom: 20px;
+}
+
+.caseimage.last{
+	margin-bottom: 0px;
 }
