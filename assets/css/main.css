@@ -931,8 +931,8 @@
 	background: #fff;
 	padding: 1.5em;
 	box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-	border-radius: 0 4px 4px 0;
-	border-width: 2px;
+	border-radius: 3px;
+	border-width: 3px;
 	border-left-style: solid;
 	line-height: 1.5em;
 }
@@ -963,24 +963,32 @@
 	vertical-align: middle;
 }
 
-.deveo{
-	border-color: #3a7fff;
+.discnordic {
+	border-color: #84a985;
 }
 
-.alero{
-	border-color: rgb(38,38,38);
+.sportsstore {
+	border-color: #888;
 }
 
-.nrholding{
-	border-color: #FF9800;
+.dotdk {
+	border-color: #8c3637;
 }
 
-.julehjaelpen{
-	border-color: rgb(217, 83, 79);
+.ikea {
+	border-color: #0e7fd5;
 }
 
-.fsu{
-	border-color: rgb(90,188,140);
+.google {
+	border-color: #0057e7;
+}
+
+.golearn {
+	border-color: #ffb606;
+}
+
+.skills > .box {
+	border-color: #008744;
 }
 
 .customers{
