@@ -85,13 +85,13 @@
 	body {
 		height: 100%;
 		background-color: #ffffff;
-		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg_thor.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg_thor.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg_thor.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0) 5%, rgba(0, 228, 255, 0)), url("../../images/bg_thor.jpg");
 		background-repeat: repeat,			no-repeat,			no-repeat;
 		background-size: 100px 100px, cover,				cover;
-		background-position: top left,		center center,		bottom center;
+		background-position: top left,		center center,		top center;
 		background-attachment: fixed,			fixed,				fixed;
 	}
 
@@ -727,6 +727,7 @@
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
+		box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
 	}
 
 		#main .avatar {
@@ -935,6 +936,26 @@
 	border-width: 3px;
 	border-left-style: solid;
 	line-height: 1.5em;
+	position: relative;
+}
+
+.box .top-right {
+	position: absolute;
+	top: 1.5em;
+	right: 1.5em;
+	max-height: 30px;
+	max-width: 100px;
+	transition: ease all 0.1s;
+	padding-bottom: 5px;
+	border-bottom: 1px solid transparent;
+}
+
+.box a .top-right:hover {
+	border-bottom: 1px solid rgba(0, 87, 231, 0.5);
+}
+
+.box b {
+	max-width: calc(100% - 100px);
 }
 
 .bio .row{
@@ -1036,4 +1057,18 @@
 
 .caseimage.last{
 	margin-bottom: 0px;
+}
+
+@media screen and (max-width: 991px) and (min-width: 568px) {
+	.experience,
+	.skills,
+	.certificates {
+		flex: 0 0 100% !important;
+		max-width: 100% !important;
+	}
+
+	.skills,
+	.certificates {
+		margin-top: 3em;
+	}
 }
